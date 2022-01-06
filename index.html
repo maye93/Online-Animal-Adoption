@@ -2,6 +2,8 @@
     <head>
         
         <link rel="stylesheet" href="app.css">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Six Caps' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
@@ -9,11 +11,14 @@
     <body>
         
         <center>
-            <div class='people'>
+            <div class='list'>
                 <!-- <img src="img_avatar.png" alt="Avatar"> -->
             </div>
-            <div class='quote'>
-                <button onclick="randomQuote()">Click me</button>
+            <div class='faveX'>
+                <img src="images/animals/chinchilla.png" id="img">
+                <br>
+                <button onclick="likeHeart()"><i class="material-icons" style="color:palevioletred" onclick="randomQuote()">favorite</i></button>
+                <button onclick="Reject()"><i class="material-icons" style="color:skyblue" onclick="randomQuote()">close</i></button>
                 <p></p>
                 <!-- <button type="randomSong" onclick="randomSong()">Random Music</button> -->
                 <!-- <input name="randomSong" id="randomSong"> -->
@@ -86,6 +91,6 @@
                 </div>
             </div>
         </div> -->
-        <script src="js/app.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
