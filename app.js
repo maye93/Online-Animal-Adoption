@@ -1,40 +1,48 @@
-// var song = Array("song1", "song2", "song3", "song4", "song5", "song6");
-
-// function randomSong() {
-//   var randomSong = song[Math.floor(Math.random() * song.length)];
-//   document.getElementById('randomSong').value = randomSong;
-// }
-
-// var myArray = [
-//   "Apples",
-//   "Bananas",
-//   "Pears"
-// ];
-
-// function randomQuote() {
-//   var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-//   document.body.innerHTML = randomItem;
-// }
-
 var arr = []
-var imgArray = ["images/animals/cockatiels.png", "images/animals/fox.png"]
+var animals = [
+  "images/animals/cockatiels.png", 
+  "images/animals/fox.png", 
+  "images/animals/glider.png", 
+  "images/animals/hedgehog.png", 
+  "images/animals/pom.png", 
+  "images/animals/racoon.png", 
+  "images/animals/retriever.jpeg", 
+  "images/animals/samoyed.png", 
+  "images/animals/toucan.png"]
 
-function likeHeart() {
+var namesArr = []
+var names = [
+  "chim",
+  "a",
+  "e",
+  "d",
+  "f",
+  "g",
+  "h",
+  "v",
+  "x"
+]
+function heart() {
     var img
+    var h1
+    var h3
     arr.push("Heart")
     console.log(arr)
-    if (arr.length < imgArray.length)
-        img = document.querySelector("#img").src = imgArray[(arr.length - 1) % imgArray.length]
-    else
-        img = document.querySelector("#img").src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    if (arr.length < 10) {
+      img = document.querySelector("#img").src = animals[(arr.length - 1) % animals.length]
+      h1 = document.querySelector("#h1").src = names[(nameArr.length - 1) % names.length]
+    } else {
+      document.querySelector(".heartReject").hidden = true
+    }    
 }
 
-function Reject()
-{
+function reject() {
     arr.push("Reject")
     console.log(arr)
-    if (arr.length < imgArray.length)
-        img = document.querySelector("#img").src = imgArray[(arr.length - 1) % imgArray.length]
-    else
-        img = document.querySelector("#img").src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    if (arr.length < 10) {
+      img = document.querySelector("#img").src = animals[(arr.length - 1) % animals.length]
+    } else {
+      document.querySelector(".heartReject").hidden = true
+    }   
 }
+

@@ -1,96 +1,25 @@
 <html>
     <head>
-        
         <link rel="stylesheet" href="app.css">
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Six Caps' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be Vietnam Pro">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     </head>
     <body>
-        
         <center>
-            <div class='list'>
-                <!-- <img src="img_avatar.png" alt="Avatar"> -->
-            </div>
-            <div class='faveX'>
-                <img src="images/animals/chinchilla.png" id="img">
-                <br>
-                <button onclick="likeHeart()"><i class="material-icons" style="color:palevioletred" onclick="randomQuote()">favorite</i></button>
-                <button onclick="Reject()"><i class="material-icons" style="color:skyblue" onclick="randomQuote()">close</i></button>
-                <p></p>
-                <!-- <button type="randomSong" onclick="randomSong()">Random Music</button> -->
-                <!-- <input name="randomSong" id="randomSong"> -->
-            </div>
+            <div class='row'>
+                <div class='list'>
+
+                </div>
+                <div class='heartReject'>
+                    <img src="images/animals/chinchilla.png" id="img">
+                    <h1 id="h1">Sam</h1>
+                    <h3 id="h3">12</h3>
+                    <button onclick="heart()"><i class="material-icons" style="color:palevioletred">favorite</i></button>
+                    <button onclick="reject()"><i class="material-icons" style="color:skyblue">close</i></button>
+                </div>
+            </div>  
         </center>
-        <!-- <div class="row">
-            <div class="whiteBox">
-                <p>
-                    <div class="city">
-                        <b>TOURIST SPOTS OF EACH CITY IN</b>
-                    </div>
-                    <div class="country">
-                        PA<br>
-                        KI<br>
-                        ST<br>
-                        AN
-                    </div>
-                </p>
-            </div>
-            <div class="greenBox">
-                <div class="row">
-                    <div class="column">
-                        <img src="images/sheikhupura.jpg" class="image">
-                        <h2>SHEIKHUPURA</h2>
-                        <p>HIRAN MINA TOMB</p>
-                    </div>
-
-                    <div class="column">
-                        <img src="images/hyderabad.jpg" class="image">
-                        <h2>HYDERABAD</h2>
-                        <p>TOMB OF MIAN GHULAM KALHORO</p>
-                    </div>
-
-                    <div class="column">
-                        <img src="images/islamabad.jpg" class="image">
-                        <h2>ISLAMABAD</h2>
-                        <p>FAISAL MASJID ISLAMABAD</p>
-                    </div>
-
-                    <div class="column">
-                        <img src="images/quetta.jpg" class="image">
-                        <h2>QUETTA</h2>
-                        <p>HANA LAKE</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <img src="images/lahore.jpg" class="image">
-                        <h2>LAHORE</h2>
-                        <p>BADSHAHI MOSQUE</p>
-                    </div>
-
-                    <div class="column">
-                        <img src="images/bhong.jpg" class="image">
-                        <h2>BHONG</h2>
-                        <p>BHONG MOSQUE</p>
-                    </div>
-
-                    <div class="column">
-                        <img src="images/karachi.jpg" class="image">
-                        <h2>KARACHI</h2>
-                        <p>MEREWHETHER CLOCK TOWER</p>
-                    </div>
-
-                    <div class="column">
-                        <img src="images/rawalpindi.jpg" class="image">
-                        <h2>RAWALPINDI</h2>
-                        <p>GURDWARA DARBAR SAHIB KARTARPUR</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <script src="app.js"></script>
     </body>
 </html>
