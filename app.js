@@ -1,3 +1,4 @@
+let list = document.getElementById("myList");
 var arr = []
 var counter = 0
 
@@ -41,15 +42,27 @@ var ages = [
 document.querySelector("#animal").src = animals[0]
 document.querySelector("#name").innerHTML = names[0]
 document.querySelector("#age").innerHTML = ages[0]
-
+  
 function heart() {
   arr.push("Heart")
-  console.log(arr)
-  console.log(animals[0])
-  if (arr.length <= animals.length) {
-    img = document.querySelector("#animal").src = animals[(arr.length - 1) % animals.length]
-    document.querySelector("#name").innerHTML = names[counter % names.length]
-    document.querySelector("#age").innerHTML = ages[counter % ages.length]
+  console.log(counter)
+  console.log(animals.length)
+  if (counter < animals.length) {
+    document.querySelector("#animal").src = animals[counter+1]
+    document.querySelector("#name").innerHTML = names[counter+1]x
+    document.querySelector("#age").innerHTML = ages[counter+1]
+    
+    var ul = document.getElementById("animalList");
+    var li = document.createElement("li");
+    var img = document.createElement("img");
+
+    img.src = animals[counter];
+    img.style.width = '156px';
+    img.style.height = 'auto';
+    li.setAttribute('id', names[counter+1]);
+    li.appendChild(document.createTextNode(ages[counter+1] +" - "+ names[counter+1]));
+    ul.appendChild(img, li);
+
     counter++
   } else {
     document.querySelector(".heartReject").hidden = true
@@ -60,7 +73,7 @@ function reject() {
   arr.push("Reject")
   console.log(arr)
   if (arr.length <= animals.length) {
-    img = document.querySelector("#animal").src = animals[(arr.length - 1) % animals.length]
+    document.querySelector("#animal").src = animals[(arr.length - 1) % animals.length]
     document.querySelector("#name").innerHTML = names[counter % names.length]
     document.querySelector("#age").innerHTML = ages[counter % ages.length]
     counter++
