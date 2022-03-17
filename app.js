@@ -1,5 +1,4 @@
 let list = document.getElementById("myList");
-var arr = []
 var counter = 0
 
 var animals = [
@@ -44,40 +43,47 @@ document.querySelector("#name").innerHTML = names[0]
 document.querySelector("#age").innerHTML = ages[0]
   
 function heart() {
-  arr.push("Heart")
-  console.log(counter)
-  console.log(animals.length)
-  if (counter < animals.length) {
+  var ul = document.getElementById("animalList");
+  var li = document.createElement("h5");
+  var img = document.createElement("img");
+
+  img.style.width = '80px';
+  img.style.height = 'auto';
+
+  if (counter < animals.length-1) {
     document.querySelector("#animal").src = animals[counter+1]
-    document.querySelector("#name").innerHTML = names[counter+1]x
+    document.querySelector("#name").innerHTML = names[counter+1]
     document.querySelector("#age").innerHTML = ages[counter+1]
     
-    var ul = document.getElementById("animalList");
-    var li = document.createElement("li");
-    var img = document.createElement("img");
-
     img.src = animals[counter];
-    img.style.width = '156px';
-    img.style.height = 'auto';
-    li.setAttribute('id', names[counter+1]);
-    li.appendChild(document.createTextNode(ages[counter+1] +" - "+ names[counter+1]));
-    ul.appendChild(img, li);
+    
+    li.appendChild(document.createTextNode(ages[counter] +" - "+ names[counter]));
+    ul.appendChild(img);
+    ul.appendChild(li);
 
     counter++
+  } else if (counter == animals.length-1){
+    img.src = animals[counter];
+    
+    li.appendChild(document.createTextNode(ages[counter] +" - "+ names[counter]));
+    ul.appendChild(img);
+    ul.appendChild(li);
+
+    document.querySelector(".heartReject").hidden = true
   } else {
     document.querySelector(".heartReject").hidden = true
   }    
 }
 
 function reject() {
-  arr.push("Reject")
-  console.log(arr)
-  if (arr.length <= animals.length) {
-    document.querySelector("#animal").src = animals[(arr.length - 1) % animals.length]
-    document.querySelector("#name").innerHTML = names[counter % names.length]
-    document.querySelector("#age").innerHTML = ages[counter % ages.length]
+  if (counter < animals.length-1) {
+    document.querySelector("#animal").src = animals[counter+1]
+    document.querySelector("#name").innerHTML = names[counter+1]
+    document.querySelector("#age").innerHTML = ages[counter+1]
     counter++
+  } else if (counter == animals.length-1){
+    document.querySelector(".heartReject").hidden = true
   } else {
     document.querySelector(".heartReject").hidden = true
-  }   
+  }    
 }
